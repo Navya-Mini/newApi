@@ -9,8 +9,19 @@
    <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;&quot;,
+  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>text/plain</value>
+   </httpHeaderProperties>
    <katalonVersion>8.2.5</katalonVersion>
    <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -36,7 +47,7 @@
       <description></description>
       <id>e605e2cb-cea0-458b-8272-5e3fb57ee5f3</id>
       <masked>false</masked>
-      <name>variable_0</name>
+      <name>variable2</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
@@ -60,7 +71,6 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 WS.verifyElementPropertyValue(response, &quot;data[0].first_name&quot;,&quot;Michael&quot;)
 WS.verifyElementPropertyValue(response, 'data[1].id',8)
-
 
 </verificationScript>
    <wsdlAddress></wsdlAddress>

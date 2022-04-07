@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;: \&quot;Navya\&quot;,\n    \&quot;job\&quot;: \&quot;Engineer\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;name\&quot;: \&quot;${userName}\&quot;,\n    \&quot;job\&quot;: \&quot;${job}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -35,6 +35,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'Navya'</defaultValue>
+      <description></description>
+      <id>a31445af-5659-4abe-9765-c7cc21fd4b95</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.job1</defaultValue>
+      <description></description>
+      <id>08f5d543-4266-4e18-b44a-9e028850e783</id>
+      <masked>false</masked>
+      <name>job</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
